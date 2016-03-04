@@ -11,7 +11,7 @@ public class Parking {
 		int A = io.getInt();
 		int B = io.getInt();
 		int C = io.getInt();
-		int[] carsInParking = new int[100];
+		int[] carsInParking = new int[101];
 
 		for (int i = 0; i < 3; i++) {
 			int arrival = io.getInt();
