@@ -28,7 +28,8 @@ public class T9Spelling {
 				}
 				lastChar = charCode % 10;
 			}
-			System.out.println(sb.toString());
+			io.println(sb.toString());
+			io.flush();
 		}
 	}
 
