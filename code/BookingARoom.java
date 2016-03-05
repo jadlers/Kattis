@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Solution for problem: https://open.kattis.com/problems/bookingaroom
  * Created by jadlers on 2016-03-05.
@@ -7,16 +9,16 @@ public class BookingARoom {
 	public static void main(String[] args) {
 		Kattio io = new Kattio(System.in, System.out);
 		int numberOfRooms = io.getInt();
-		boolean[] rooms = new boolean[numberOfRooms];
+		boolean[] rooms = new boolean[numberOfRooms + 1];
 		int bookedRooms = io.getInt();
-		for (int i = 0; i < bookedRooms; i++) {
-			rooms[io.getInt() - 1] = true;
+		for (int i = 1; i <= bookedRooms; i++) {
+			rooms[io.getInt()] = true;
 		}
 
 		boolean printed = false;
-		for (int i = 0; i < rooms.length; i++) {
+		for (int i = 1; i < rooms.length; i++) {
 			if (!rooms[i]) {
-				io.println(i+1);
+				io.println(i);
 				printed = true;
 				break;
 			}
